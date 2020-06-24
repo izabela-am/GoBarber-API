@@ -4,8 +4,8 @@ import Appointment from '../models/Appointment';
 import AppointmentsRepository from '../repositories/AppointmentsRepository';
 
 interface RequestDTO {
-  date: Date;
   provider: string;
+  date: Date;
 }
 
 class CreateAppointmentService {
@@ -18,11 +18,11 @@ class CreateAppointmentService {
   public execute({ date, provider }: RequestDTO): Appointment {
     const appointmentDate = startOfHour(date);
 
-    const findAppointmendInSameDate = this.appointmentsRepository.findByDate(
+    const findAppointmentInSameDate = this.appointmentsRepository.findByDate(
       appointmentDate,
     );
 
-    if (findAppointmendInSameDate) {
+    if (findAppointmentInSameDate) {
       throw Error('This time slot is aready taken');
     }
 

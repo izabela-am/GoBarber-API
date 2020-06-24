@@ -1,8 +1,9 @@
-import express, { Router } from 'express';
+import { Router } from 'express';
+
+// routes files
 import appointmentsRouter from './appointments.routes';
 
 const routes = Router();
-routes.use(express.json());
 
 routes.use('/appointments', appointmentsRouter);
 
