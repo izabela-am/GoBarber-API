@@ -20,6 +20,7 @@ module.exports = {
     "prettier"
   ],
   rules: {
+    'camelcase': 'off',
     "class-methods-use-this": "off",
     "no-shadow": "off",
     "no-param-reassign": "off",
