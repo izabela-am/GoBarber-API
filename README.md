@@ -47,7 +47,7 @@
   - yarn
   
   # Start the server
-  - yarn start
+  - yarn dev:server
 ```
 
 
