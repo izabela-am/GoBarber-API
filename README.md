@@ -16,8 +16,8 @@
 
 <div align="center">
 
-[Technology Stack](#technology_stack) | 
-[How to Use](#how_to_use) | 
+[Technology Stack](#technology-stack) | 
+[How to Use](#how-to-use) | 
 [Contributing](#contributin) | 
 [License](#license)
 
