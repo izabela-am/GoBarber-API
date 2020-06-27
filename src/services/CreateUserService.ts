@@ -12,7 +12,6 @@ interface RequestDTO {
 class CreateUserService {
   public async execute({ name, email, password }: RequestDTO): Promise<User> {
     const usersRepository = getRepository(User);
-
     const checkIfUserExists = await usersRepository.findOne({
       where: { email },
     });
