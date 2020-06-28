@@ -16,10 +16,7 @@
 
 <div align="center">
 
-[Technology Stack](#technology-stack) | 
-[How to Use](#how-to-use) | 
-[Contributing](#contributin) | 
-[License](#license)
+First big project from [Rocketseat](https://rocketseat.com.br/)'s GoStack Bootcamp 
 
 </div>
 
