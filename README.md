@@ -16,10 +16,10 @@
 
 <div align="center">
 
-[Technology Stack](#technology-stack) | 
-[How to Use](#how-to-use) | 
-[Contributing](#contributin) | 
-[License](#license)
+[Technology Stack](#Technology-Stack) | 
+[How to Use](#How-to-use) | 
+[Contributing](#Contributing) | 
+[License](#License)
 
 </div>
 
