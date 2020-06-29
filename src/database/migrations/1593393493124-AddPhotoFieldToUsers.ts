@@ -6,7 +6,7 @@ export default class AddPhotoFieldToUsers1593393493124
     await queryRunner.addColumn(
       'users',
       new TableColumn({
-        name: 'profilePicture',
+        name: 'profile_picture',
         type: 'varchar',
         isNullable: true,
       }),
@@ -14,6 +14,6 @@ export default class AddPhotoFieldToUsers1593393493124
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropColumn('users', 'profilePicture');
+    await queryRunner.dropColumn('users', 'profile_picture');
   }
 }

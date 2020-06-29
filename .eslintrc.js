@@ -20,6 +20,11 @@ module.exports = {
     "prettier"
   ],
   rules: {
+    '@typescript-eslint/no-unused-vars': [
+      'error', {
+        'argsIgnorePattern': '_'
+      }
+    ],
     'camelcase': 'off',
     "class-methods-use-this": "off",
     "no-shadow": "off",

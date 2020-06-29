@@ -2,6 +2,7 @@ import { Router } from 'express';
 import multer from 'multer';
 
 import CreateUserService from '../services/CreateUserService';
+import UpdateUserProfilePic from '../services/UpdateUserProfilePicService';
 import checkIfAuthenticated from '../middlewares/checkIfAuthenticated';
 import uploadConfig from '../config/upload';
 
@@ -10,31 +11,35 @@ const upload = multer(uploadConfig);
 
 // CREATE
 usersRouter.post('/', async (request, response) => {
-  try {
-    const { name, email, password } = request.body;
-    const createUser = new CreateUserService();
+  const { name, email, password } = request.body;
+  const createUser = new CreateUserService();
 
-    const user = await createUser.execute({
-      name,
-      email,
-      password,
-    });
+  const user = await createUser.execute({
+    name,
+    email,
+    password,
+  });
 
-    delete user.password;
+  delete user.password;
 
-    return response.json(user);
-  } catch (err) {
-    return response.status(400).json({ error: err.message });
-  }
+  return response.json(user);
 });
 
 // UPDATE USERS PROFILE PICTURE
 usersRouter.patch(
   '/avatar',
   checkIfAuthenticated,
-  upload.single('profilePicture'),
+  upload.single('profile_picture'),
   async (request, response) => {
-    return response.json({ message: 'ok' });
+    const updateUserProfilePicture = new UpdateUserProfilePic();
+    const user = await updateUserProfilePicture.execute({
+      user_id: request.user.id,
+      pictureFilename: request.file.filename,
+    });
+
+    delete user.password;
+
+    return response.json(user);
   },
 );
 
