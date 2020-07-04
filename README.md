@@ -48,11 +48,18 @@ First big project from [Rocketseat](https://rocketseat.com.br/)'s GoStack Bootca
 ```
 
 
-# :fork_and_knife: Contributing
-- Fork this repository
-- Create a branch for your features
-- Write descriptive commit message
-- Push your branch
+# :fork_and_knife: Contributions
+```shell
+  # Fork this repository
+  # Create a branch for your features
+  git checkout -b my-feature
+  
+  # Commit your changes (and make sure to write a nice commit message!)
+  git commit -m "My message here"
+  
+  # Push your branch
+  git push origin my-feature
+```
 
 # :information_source: License
 This project uses the <a href="https://github.com/izabela-am/GoBarber-API/blob/master/LICENSE">MIT License</a>.  
