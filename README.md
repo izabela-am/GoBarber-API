@@ -14,13 +14,7 @@
 </div>
 
 
-<div align="center">
-
-First big project from [Rocketseat](https://rocketseat.com.br/)'s GoStack Bootcamp 
-
-</div>
-
-<img src="https://vscode-eastus.azurewebsites.net/assets/docs/nodejs/recipes/node-typescript-docker.png">
+<img src="https://miro.medium.com/max/2640/1*zFOmo73YnwZzrrTXZouEGQ.png">
 
 # :computer: Technology Stack
 - NodeJS
