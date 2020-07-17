@@ -14,13 +14,7 @@
 </div>
 
 
-<div align="center">
-
-First big project from [Rocketseat](https://rocketseat.com.br/)'s GoStack Bootcamp 
-
-</div>
-
-<img src="https://camo.githubusercontent.com/d25397e9df01fe7882dcc1cbc96bdf052ffd7d0c/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f676f6c64656e2d77696e642f626f6f7463616d702d676f737461636b2f6865616465722d6465736166696f732e706e67">
+<img src="https://miro.medium.com/max/2640/1*zFOmo73YnwZzrrTXZouEGQ.png">
 
 # :computer: Technology Stack
 - NodeJS
@@ -48,11 +42,18 @@ First big project from [Rocketseat](https://rocketseat.com.br/)'s GoStack Bootca
 ```
 
 
-# :fork_and_knife: Contributing
-- Fork this repository
-- Create a branch for your features
-- Write descriptive commit message
-- Push your branch
+# :fork_and_knife: Contributions
+```shell
+  # Fork this repository
+  # Create a branch for your features
+  git checkout -b my-feature
+  
+  # Commit your changes (and make sure to write a nice commit message!)
+  git commit -m "My message here"
+  
+  # Push your branch
+  git push origin my-feature
+```
 
 # :information_source: License
 This project uses the <a href="https://github.com/izabela-am/GoBarber-API/blob/master/LICENSE">MIT License</a>.  
