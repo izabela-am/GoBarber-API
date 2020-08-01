@@ -21,6 +21,7 @@
 - TypeScript
 - Express
 - PostgreSQL
+- Docker
 - TypeORM
 - uuidv4
 - ts-node-dev
