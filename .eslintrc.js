@@ -26,6 +26,7 @@ module.exports = {
       }
     ],
     'camelcase': 'off',
+    'no-useless-constructor': 'off',
     "class-methods-use-this": "off",
     "no-shadow": "off",
     "no-param-reassign": "off",

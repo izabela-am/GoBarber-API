@@ -1,10 +1,10 @@
-import { getRepository } from 'typeorm';
 import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 
 import User from '@modules/users/infra/typeorm/entities/User';
 import authConfig from '@config/auth';
 import AppError from '@shared/errors/AppError';
+import IUsersRepository from '../repositories/IUsersRepository';
 
 interface RequestDTO {
   email: string;
@@ -17,11 +17,11 @@ interface Response {
 }
 
 class AuthenticateUserService {
-  public async execute({ email, password }: RequestDTO): Promise<Response> {
-    const usersRepository = getRepository(User);
+  constructor(private usersRepository: IUsersRepository) {}
 
+  public async execute({ email, password }: RequestDTO): Promise<Response> {
     // ---------------USER CREDENTIAL VALIDATION----------------- //
-    const user = await usersRepository.findOne({ where: { email } });
+    const user = await this.usersRepository.findByEmail(email);
     if (!user) {
       throw new AppError('Incorrect email/password combination', 401);
     }
