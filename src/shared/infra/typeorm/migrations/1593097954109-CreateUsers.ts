@@ -14,12 +14,14 @@ export default class CreateUsers1593097954109 implements MigrationInterface {
             generationStrategy: 'uuid',
             default: 'uuid_generate_v4()',
           },
+
           // Coluna NAME
           {
             name: 'name',
             type: 'varchar',
             isNullable: false,
           },
+
           // Coluna EMAIL
           {
             name: 'email',
@@ -27,12 +29,14 @@ export default class CreateUsers1593097954109 implements MigrationInterface {
             isNullable: false,
             isUnique: true,
           },
+
           // Coluna PASSWORD
           {
             name: 'password',
             type: 'varchar',
             isNullable: false,
           },
+
           // TIMESTAMPS
           {
             name: 'created_at',

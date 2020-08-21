@@ -1,5 +1,6 @@
 import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
+import { inject, injectable } from 'tsyringe';
 
 import User from '@modules/users/infra/typeorm/entities/User';
 import authConfig from '@config/auth';
@@ -16,11 +17,14 @@ interface Response {
   token: string;
 }
 
+@injectable()
 class AuthenticateUserService {
-  constructor(private usersRepository: IUsersRepository) {}
+  constructor(
+    @inject('UsersRepository')
+    private usersRepository: IUsersRepository,
+  ) {}
 
   public async execute({ email, password }: RequestDTO): Promise<Response> {
-    // ---------------USER CREDENTIAL VALIDATION----------------- //
     const user = await this.usersRepository.findByEmail(email);
     if (!user) {
       throw new AppError('Incorrect email/password combination', 401);
@@ -30,7 +34,6 @@ class AuthenticateUserService {
     if (!passwordMatches) {
       throw new AppError('Incorrect email/password combination', 401);
     }
-    // ---------------------------------------------------------- //
 
     const { secret, expiresIn } = authConfig.jwt;
 
