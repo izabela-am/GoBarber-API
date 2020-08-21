@@ -3,11 +3,12 @@ import 'express-async-errors';
 import 'reflect-metadata';
 import cors from 'cors';
 
+import '@shared/infra/typeorm';
+import '@shared/container';
+
 import routes from '@shared/infra/http/routes';
 import uploadConfig from '@config/upload';
 import AppError from '@shared/errors/AppError';
-
-import '@shared/infra/typeorm';
 
 const app = express();
 

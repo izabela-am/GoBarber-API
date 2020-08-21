@@ -25,6 +25,7 @@ module.exports = {
         'argsIgnorePattern': '_'
       }
     ],
+    'no-console': 'off',
     'camelcase': 'off',
     'no-useless-constructor': 'off',
     "class-methods-use-this": "off",
